@@ -27,3 +27,13 @@ while i < stop:
 
 avg_change = sum(list_changes) / len(list_changes)    #calculate average
 avg_change = round(avg_change, 2)    #format to 2 decimal places
+
+##greatest increase in profits##
+max_inc = max(budget_df["Profit/Losses"])    #find greatest increase
+max_inc_row = budget_df[budget_df["Profit/Losses"]==max_inc]   #get row
+max_inc_date = max_inc_row.iloc[0,0]    #pull date from row
+
+##greatest decrease in profits##
+max_dec = min(budget_df["Profit/Losses"])    #find greatest decrease
+max_dec_row = budget_df[budget_df["Profit/Losses"]==max_dec]    #get row
+max_dec_date = max_dec_row.iloc[0,0]    #pull date from row
