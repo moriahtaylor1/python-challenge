@@ -40,8 +40,10 @@ max_dec_date = max_dec_row.iloc[0,0]    #pull date from row
 
 ##output analysis table as .txt file##
 
+#change directory to Analysis folder
 os.chdir('../PyBank/Analysis')
 
+#create .txt file
 with open('analysis.txt', 'w') as f:
     #write in file
     print('Financial Analysis', end='\n', file=f)
@@ -51,3 +53,9 @@ with open('analysis.txt', 'w') as f:
     print(f'Average Change: ${avg_change}', end='\n', file=f)
     print(f'Greatest Increase in Profits: {max_inc_date} (${max_inc})', end='\n', file=f)
     print(f'Greatest Decrease in Profits: {max_dec_date} (${max_dec})', file=f)
+
+#read .txt file so it prints out in console
+with open('analysis.txt', 'r') as f:
+    text = f.read()
+    print(text)
+    f.close()
