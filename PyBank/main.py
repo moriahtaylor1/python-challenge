@@ -29,9 +29,9 @@ avg_change = sum(list_changes) / len(list_changes)    #calculate average
 avg_change = round(avg_change, 2)    #format to 2 decimal places
 
 ##greatest increase in profits##
-first = [0]
-list_changes2 = first + list_changes
-budget_df["Change"] = list_changes2
+first = [0]    #create a list containing zero because first row doesn't have a 'change' calculation
+list_changes2 = first + list_changes    #add zero to beginning of list of changes
+budget_df["Change"] = list_changes2    #add list of changes to dataframe as a new column
 
 max_inc = max(budget_df["Change"])    #find greatest increase
 max_inc_row = budget_df[budget_df["Change"]==max_inc]   #get row
