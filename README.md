@@ -1,5 +1,5 @@
 # python-challenge
-Python homework assignment (Due: 03/20/2021)
+Python assignment covering Git, reading and writing CSV and .txt files, and basic calculation and analysis methods (Due: 03-20-2021)
 
 # Python Homework - Py Me Up, Charlie
 
